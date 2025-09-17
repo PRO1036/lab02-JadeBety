@@ -78,8 +78,11 @@ réglé dans geomdensity.
 Boxplot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x= continent, y = plastic_waste_per_cap)) +
+      geom_boxplot()
 ```
+
+![](lab-02_files/figure-gfm/plastic-waste-boxplot-1.png)<!-- -->
 
 Violin plot:
 

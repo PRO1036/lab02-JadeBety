@@ -46,23 +46,25 @@ ggplot(plastic_waste, aes(x = plastic_waste_per_cap, fill = continent)) +
 ggplot(plastic_waste, aes(x = plastic_waste_per_cap, fill = continent)) +   geom_density( alpha = 0.5)
 ```
 
-La couleur se trouve avec aes puisque cette dernière est du maping (détermine une propriété en fonction d'une propriété des données) tandis que la transparence est du setting (fixer une propriété), donc elle est réglé dans geomdensity.
+La couleur se trouve avec aes puisque cette dernière est du mapping (détermine une propriété en fonction d'une propriété des données) tandis que la transparence est du setting (fixer une propriété), donc elle est réglé dans geomdensity.
 
 ### Exercise 3
 
 Boxplot:
 
 ```{r plastic-waste-boxplot}
-# insert code here
+ggplot(plastic_waste, aes(x= continent, y = plastic_waste_per_cap)) +
+      geom_boxplot()
 ```
 
 Violin plot:
 
 ```{r plastic-waste-violin}
-# insert code here
+ggplot(plastic_waste, aes(x= continent, y = plastic_waste_per_cap)) +
++     geom_violin()
 ```
 
-Réponse à la question...
+Les violin plots permettent de visualiser la distrubution de données, comme les box plots, mais permettent aussi de visualiser la forme de cette distribution et de visualiser la densité. En d'autres termes, les violins plots nous permettent d'analyser la forme de la distribution et les box plots sont efficaces pour une analyse plus rapide ou pour voir les valeurs extrêmes.
 
 ### Exercise 4
 
