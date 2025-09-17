@@ -1,7 +1,7 @@
 ---
 title: "Lab 02 - Plastic waste"
-author: "Votre nom"
-date: "La date"
+author: "Jade Bety"
+date: "16 septembre 2025"
 output: github_document
 ---
 
@@ -26,10 +26,9 @@ plastic_waste <- plastic_waste %>%
 ## Exercices
 
 ### Exercise 1
-
+En Amérique du Nord et en Asie, la quantité de déchets par habitant est plus dispersée, malgré le fait qu'il semble avoir une concentration des données vers 0,25. Pour l'Afrique, sa consommation semble être moins élevé que pour les autres continents. L'Océanie et l'Europe semble avoir des distributions semblable, mais l'Océanie a probablement moins de pays parce que les barres sont plus basses. L'Amérique du Sud a une majorité de valeur plus basse vers 0,20.
 ```{r plastic-waste-continent}
-# insert code here
-```
+ggplot(plastic_waste, aes(x=plastic_waste_per_cap))+                                              geom_histogram(binwidth = 0.2, fill ="grey")+                                                   facet_wrap(~ continent) 
 
 ### Exercise 2
 
